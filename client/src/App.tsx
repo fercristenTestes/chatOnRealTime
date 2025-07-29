@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const ws = new WebSocket('ws://localhost:3001');
+const ws = new WebSocket(`wss://${window.location.host}`);
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<string[]>([]);
